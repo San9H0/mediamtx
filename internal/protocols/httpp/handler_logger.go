@@ -58,4 +58,5 @@ func (h *handlerLogger) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	h.Handler.ServeHTTP(logw, r)
 
 	h.log.Log(logger.Debug, "[conn %v] [s->c] %s", r.RemoteAddr, logw.dump())
+	//h.log.Log(logger.Debug, "[conn %v] [s->c] %s \n%s", r.RemoteAddr, logw.dump(), logw.buf.Bytes())
 }

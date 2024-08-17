@@ -302,7 +302,7 @@ type Conf struct {
 
 func (conf *Conf) setDefaults() {
 	// General
-	conf.LogLevel = LogLevel(logger.Info)
+	conf.LogLevel = LogLevel(logger.Debug)
 	conf.LogDestinations = LogDestinations{logger.DestinationStdout}
 	conf.LogFile = "mediamtx.log"
 	conf.ReadTimeout = 10 * StringDuration(time.Second)
